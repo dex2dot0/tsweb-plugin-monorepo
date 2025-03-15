@@ -16,6 +16,19 @@ export namespace bar {
       encompassApiClient = new EncompassAPI('https://api.elliemae.com/encompass', accessToken);
     } catch (error) {
       console.error('Error initializing Encompass client', error);
+    } finally {
+      getUserFromApi();
+    }
+  }
+
+  async function getUserFromApi() {
+    try {
+      const user = await encompassApiClient.v1GetUser();
+      // User is now typed thanks to types defined in the types/encompass-api.d.ts file
+      const userName = user?.fullName;
+      console.log(`User object from API. Hello ${userName}!`);
+    } catch (error) {
+      console.error('Error getting user', error);
     }
   }
 

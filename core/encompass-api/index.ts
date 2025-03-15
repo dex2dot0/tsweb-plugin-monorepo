@@ -1,4 +1,5 @@
 import { getLoan } from './loanManagement/v3';
+import { getUser } from './settings/v1';
 
 // This is a poor example of how to implement some shared logic across plugins.
 // This is not necessarily a good pattern to follow and is only used for demonstration purposes.
@@ -50,5 +51,14 @@ export class EncompassAPI {
     }
 
     return await getLoan(`${this.url}/v3/loans/${loanGuid}`, this.apiToken);
+  }
+
+  async v1GetUser(userId?: string) {
+    if (!this.apiToken) {
+      console.error('API Token is required');
+      return;
+    }
+
+    return await getUser(this.url, this.apiToken, userId);
   }
 }

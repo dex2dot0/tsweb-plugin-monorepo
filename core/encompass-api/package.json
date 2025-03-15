@@ -1,6 +1,9 @@
 {
-	"name": "@core/encompass-api",
-	"version": "1.0.0",
-	"description": "Shared Encompass API methods",
-	"main": "index.js"
+  "name": "@core/encompass-api",
+  "version": "1.0.0",
+  "description": "Shared Encompass API methods",
+  "main": "index.js",
+  "dependencies": {
+    "@types/encompass-api": "workspace:*"
+  }
 }
