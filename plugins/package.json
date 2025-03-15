@@ -1,0 +1,16 @@
+{
+  "name": "plugins",
+  "version": "1.0.0",
+  "description": "Shared package.json for plugins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@core/encompass-api": "workspace:*",
+    "@core/ssf": "workspace:*"
+  }
+}

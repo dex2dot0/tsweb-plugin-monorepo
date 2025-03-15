@@ -1,0 +1,26 @@
+{
+  "name": "tsweb-plugin-monorepo",
+  "version": "1.0.0",
+  "description": "An opinionated typescript based monorepo for web plugins",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.dev.mjs  --bundle",
+    "build:min": "node esbuild.split.mjs"
+  },
+  "keywords": [
+    "ngtypes",
+    "ssf",
+    "plugin",
+    "encompass"
+  ],
+  "author": "dex2dot0",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/elliemae__em-ssf-guest": "^1.19.0",
+    "esbuild": "^0.25.0",
+    "esbuild-plugin-dev-server": "^4.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.7.2"
+  }
+}
